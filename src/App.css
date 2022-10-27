@@ -1,38 +1,252 @@
-.App {
+:root {
+  --firstColor: #0f111d;
+  --secondColor: #236f16;
+  --thirdColor: #002713;
+  --fourthColor: #DFE6EA;
+  --fifthColor: #061516;
+  --sixthColor: #16430e;
+  --highlight: #8dff79;
+  --font-size: 1.3rem;
+  --roboto: 'Roboto', sans-serif;
+  --libre: 'Libre Baskerville', serif;
+  --gradient: linear-gradient(90deg, rgba(35,111,22,1) 24%, rgba(223,230,234,1) 97%);
+}
+
+body {
+  padding: 0;
+  margin:0;
+  font-family: var(--roboto);
+  background-color: var(--firstColor);
+  font-size: var(--font-size);
+  color: var(--fourthColor);
+}
+
+h1, h2, h3 {
+  margin:0;
+  padding:0;
+}
+a {
+  color: var(--secondColor);
+}
+a:hover {
+  color: var(--highlight);
+  text-decoration: none;
+}
+img {
+  width: 100%;
+}
+
+/* intro styles */
+#intro {
+  padding: 4rem 1rem 10rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#intro p {
+  font-size: 1rem;
+  line-height: 1.5; /* do not assign unit here so it is relational to font-size */
+}
+#intro .name {
+  font-family: var(--libre);
+}
+.name span {
+  font-size: 4rem;
+  color: var(--secondColor);
+  display: block;
+}
+#intro h2 {
+  font-size: 3rem;
+  font-weight: normal;
+}
+
+/* Projects styles */
+.project-selectors {
+  background-color: var(--secondColor);
+  padding:0.5rem;
+  border-radius:5px;
+  border: 3px solid var(--fifthColor);
+  font-family: var(--libre);
+  font-size: 20px;
+  text-decoration: none;
+}
+.project-selectors:hover {
+  color: var(--highlight);
+  background-color: var(--fifthColor);
+  border: 1px solid var(--highlight);
+  
+}
+.section-projects {
+  background-color: var(--thirdColor);
+}
+.projects {
+  padding: 4rem 1rem;
+}
+.projects h2 {
+  font-size: 2rem;
+  margin-bottom: calc(2.5rem * 1.5);
+}
+.projects h3 {
+  color: var(--secondColor);
+}
+.projects h4 {
+  font-size: 1rem;
+  font-family: var(--libre);
+  margin: 0;
+}
+.blackbox {
+  background-color: var(--fifthColor);
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.projects ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
+.projects-img {
+  margin: 2rem 0 4rem 0;
+  border-left: 1px solid var(--firstColor);
+  border-top: 1px solid var(--firstColor);
+  border-radius: 25px;
+  padding: 1rem;
+}
+@media (min-width: 850px) {
+  article {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      gap: 1rem;
+  }
+  .projects-img{
+      grid-column: 1/6;
+      grid-row: 1/2;
+  }
+  .text {
+      grid-column: 5/11;
+      grid-row: 1/2;
+      order: 2;
+      text-align: right;
+  }
+  .projects ul {
+      justify-content: flex-end;
+  }
+}
+
+
+/* contact styles */
+#contact{
+  font-size: .8em;
+  text-align: center;
+  width: 500px;
+  padding: 2rem;
+  margin: 0 auto;
+}
+#contact :last-child {
+  margin-top: 2rem;
+}
+.section-background {
+  background-color: var(--sixthColor);
+}
+.gradient {
+  background: var(--gradient);
+  height: 3px;
+}
+
+/* navbar */
+nav{
+  font-family: var(--libre);
+  font-size: 80%;
+  padding: 1rem;
+}
+.title {
+  margin-left: 10px;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+nav [class*="fa-"] {
+  font-size: 150%;
+  color: var(--secondColor);
+}
+nav .fa-code {
+  font-size: 100%;
+}
+nav a {
+  color: var(--fourthColor);
+  text-decoration: none;
+  display: block; /* makes the whole space clickable rather than just the text */
+}
+nav a:hover,
+nav [class*="fa-"]:hover {
+  color: var(--highlight);
+}
+nav li:first-child {
+  flex-basis: 100%; /* pushes this list item on it's own line */
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.button {
+  background-color: var(--fifthColor);
+  padding:0.5rem;
+  border-radius:5px;
+  font-family: var(--libre);
+  text-decoration: none;
+}
+.button:hover {
+  color: var(--highlight);
+  background-color: var(--fifthColor);
+  border: 1px solid var(--highlight);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (min-width: 850px) {
+  nav {
+      max-width: 1200px;
+      margin: 0 auto;
+  }
+  nav li:first-child {
+      flex-basis: auto;
+      text-align: left;
+      margin-right: auto;
   }
 }
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 4rem 0;
+}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-flow: row wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 4rem;
+  font-size: 2rem;
 }
-
-.App-link {
-  color: #61dafb;
+footer li:first-child {
+  flex-basis: 100%; /* pushes this list item on it's own line */
+  text-align: center;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+footer a {
+  color: var(--fourthColor);
+  
+}
+footer a:hover {
+  color: var(--highlight);
 }
