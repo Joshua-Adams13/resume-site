@@ -13,7 +13,7 @@ const Footer = () => {
           <li><a href="https://github.com/Joshua-Adams13" target="_blank"><span class="fa-brands fa-github" aria-hidden="true"></span><span class="sr-only">Github</span></a></li>
           <li><a href="mailto:josh.l.adams13@gmail.com" target="_blank"><span className="fa-solid fa-envelope" aria-hidden="true"></span><span class="sr-only">Email</span></a></li>
         </ul>
-        <p><small>&copy; 2022 Josh Adams. All rights reserved.</small></p>
+        <p><small>&copy; 2023 Josh Adams. All rights reserved.</small></p>
       </footer>
     )
 }

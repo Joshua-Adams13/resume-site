@@ -10,7 +10,7 @@ function App() {
 
       <section id="intro">
         <p className="name">Hi, my name is <span>Josh Adams</span></p>
-        <h3>A current Marketing Analyst aspiring to become a software engineer</h3>
+        <h3>A current Marketing Analyst looking to expand my data expertise</h3>
         <p>In my marketing career, I've learned a profound truth about myself - I am incredibly passionate about building things 
           and working with data. I've spent many evenings and weekends learning to write code and now I'm  
           looking for a career where I can grow my skills and contribute to building and optimizing tools with like-minded teammates.</p>
